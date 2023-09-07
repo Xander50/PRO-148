@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:black">
+
+    <a-assets>
+    <a-asset-item id="vader" src="./darth_vader_by_oscar_creativo/scene.gltf"></a-asset-item>
+    <a-asset-item id="bench" src="./park_bench/scene.gltf"></a-asset-item>  
+    <a-asset-item id="lamp" src="./fancy_street_lamp/scene.gltf"></a-asset-item>  
+    </a-assets>
+
+    
+
+    <a-entity>
+      <a-entity light="type:directional;castShadow:True;intensity:10;distance:200;decay:2;color:white" position="-100 18 20"></a-entity>
+    </a-entity>
+
+    <a-plane position="0 1.25 0"  rotation="-90 0 0" width="5" height="2" color="green" src="https://img.freepik.com/free-photo/close-up-image-fresh-spring-green-grass_1232-2759.jpg"></a-plane>
+
+    <a-entity>
+      <a-entity position="0 1.80 0" scale="0.01 0.01 0.01" id="vader" gltf-model="#vader" shadow="cast:true"></a-entity>
+    </a-entity>
+    <a-entity>
+      <a-entity position="-1 1.25 0" rotation="0 180 0" scale=".5 .5 .5" id="bench" gltf-model="#bench" shadow="cast:true"></a-entity>
+    </a-entity>
+    <a-entity>
+      <a-entity position="-1 1.25 -.5" rotation="0 90 0" scale=".3 .3 .3" id="lamp" gltf-model="#lamp" shadow="cast:true"></a-entity>
+    </a-entity>
+      
+
+  </a-scene>
+</body>
+
+</html>
